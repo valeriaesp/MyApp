@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>My App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="appController.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h3>Testing the feature!</h3>
+            <div align="center">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Progress Bar</button>
+
+
+                <div id="myModal" class="modal" role="dialog"  data-backdrop="static" data-keyboard="false">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header" align="left" style="color:white; background-color:black;">
+                                <button type="button" class="close" data-dismiss="modal" >&times;</button>
+                                <h4 class="modal-title">Your Progress</h4>
+                            </div>
+                            <div class="modal-body" style="background-color:lightgrey;">
+                                <div class="panel panel-default" style="border-color:black;">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <br>
+                                                <b>Reached:</b>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <br>
+                                                <div class="progress">
+                                                    <div id="pgbar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="125">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="well well-sm" style="background-color:#4a5aef">
+                                                    Target $125
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p id="value"><b></b></p>
+                                        </div>
+                                        <div class="row">
+                                            <p id="missing"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer" style="background-color:lightgrey; height:50px;">
+                                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal" onclick="stopInterval();">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</body>
+
+</html>
